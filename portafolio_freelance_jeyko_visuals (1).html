@@ -1,0 +1,1658 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeyko Visuals — Edición de video, Motion graphics y Diseño gráfico</title>
+  <meta name="description" content="Portafolio profesional de Jeyko Visuals (@jeykovisuals). Edición de video, motion graphics y diseño gráfico con precisión de estudio para YouTubers, marcas y empresas." />
+
+  <!-- Tipografía Inter como respaldo editorial limpio para la pila nativa Apple -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tokens de diseño minimalista estilo Apple -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            apple: {
+              white: '#FFFFFF',
+              surface: '#F5F5F7',
+              ink: '#1D1D1F',
+              secondary: '#6E6E73',
+              muted: '#86868B',
+              blue: '#0071E3',
+              'blue-hover': '#0077ED',
+              cinema: '#0A0A0C',
+              black: '#000000'
+            }
+          },
+          fontFamily: {
+            sans: [
+              '-apple-system',
+              'BlinkMacSystemFont',
+              '"SF Pro Display"',
+              '"SF Pro Text"',
+              '"Inter"',
+              '"Helvetica Neue"',
+              'Arial',
+              'sans-serif'
+            ]
+          },
+          transitionTimingFunction: {
+            apple: 'cubic-bezier(0.22, 1, 0.36, 1)'
+          },
+          boxShadow: {
+            segment: '0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04)',
+            sheet: '0 24px 64px rgba(0, 0, 0, 0.14)',
+            toast: '0 12px 32px rgba(0, 0, 0, 0.16)'
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body id="top" class="bg-[#FFFFFF] text-[#1D1D1F] font-sans antialiased selection:bg-[#0071E3]/15 selection:text-[#1D1D1F] overflow-x-hidden">
+
+  <!-- =====================================================================
+       1. NAVEGACIÓN STICKY TRANSLÚCIDA ESTILO APPLE
+  ===================================================================== -->
+  <header class="sticky top-0 z-40 h-[52px] w-full bg-white/[0.82] backdrop-blur-[20px] backdrop-saturate-[180%] border-b border-black/[0.08]">
+    <div class="max-w-[1120px] h-full mx-auto px-5 sm:px-8 flex items-center justify-between">
+
+      <!-- Wordmark sobrio -->
+      <a href="#top" class="text-[15px] font-semibold tracking-[-0.02em] text-[#1D1D1F] hover:opacity-75 transition-opacity duration-300 ease-apple focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3] rounded-md">
+        Jeyko Visuals
+      </a>
+
+      <!-- Enlaces principales desktop -->
+      <nav class="hidden md:flex items-center gap-8" aria-label="Navegación principal">
+        <a href="#trabajo" class="text-[13px] font-normal text-[#1D1D1F]/80 hover:text-[#1D1D1F] transition-colors duration-200">Trabajo</a>
+        <a href="#servicios" class="text-[13px] font-normal text-[#1D1D1F]/80 hover:text-[#1D1D1F] transition-colors duration-200">Servicios</a>
+        <a href="#proceso" class="text-[13px] font-normal text-[#1D1D1F]/80 hover:text-[#1D1D1F] transition-colors duration-200">Proceso</a>
+        <a href="#preguntas" class="text-[13px] font-normal text-[#1D1D1F]/80 hover:text-[#1D1D1F] transition-colors duration-200">Preguntas</a>
+      </nav>
+
+      <!-- Acción principal y activador menú móvil -->
+      <div class="flex items-center gap-3">
+        <a href="#contacto" class="hidden sm:inline-flex items-center justify-center h-[32px] px-4 rounded-full bg-[#1D1D1F] text-white text-[13px] font-medium hover:bg-black transition-colors duration-200 ease-apple focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3] focus-visible:ring-offset-2">
+          Iniciar proyecto
+        </a>
+
+        <button id="mobile-menu-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden inline-flex items-center justify-center w-9 h-9 -mr-1.5 rounded-full text-[#1D1D1F] hover:bg-black/[0.04] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3]">
+          <svg id="icon-hamburger" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <line x1="4" y1="9" x2="20" y2="9" />
+            <line x1="4" y1="15" x2="20" y2="15" />
+          </svg>
+          <svg id="icon-close-menu" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18" />
+            <line x1="18" y1="6" x2="6" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Menú Móvil a Pantalla Limpia con acceso directo a WhatsApp -->
+  <div id="mobile-menu" class="hidden md:hidden fixed inset-x-0 top-[52px] bottom-0 z-30 bg-white/[0.97] backdrop-blur-xl px-6 pt-10 pb-10 flex flex-col justify-between transition-opacity duration-300 ease-apple overflow-y-auto">
+    <nav class="flex flex-col divide-y divide-black/[0.08]" aria-label="Navegación móvil">
+      <a href="#trabajo" class="mobile-link py-5 text-[24px] font-semibold tracking-[-0.03em] text-[#1D1D1F]">Trabajo</a>
+      <a href="#servicios" class="mobile-link py-5 text-[24px] font-semibold tracking-[-0.03em] text-[#1D1D1F]">Servicios</a>
+      <a href="#proceso" class="mobile-link py-5 text-[24px] font-semibold tracking-[-0.03em] text-[#1D1D1F]">Proceso</a>
+      <a href="#preguntas" class="mobile-link py-5 text-[24px] font-semibold tracking-[-0.03em] text-[#1D1D1F]">Preguntas</a>
+      <a href="#contacto" class="mobile-link py-5 text-[24px] font-semibold tracking-[-0.03em] text-[#1D1D1F]">Contacto</a>
+    </nav>
+
+    <div class="pt-6 border-t border-black/[0.08] space-y-3">
+      <a href="#contacto" class="mobile-link flex items-center justify-center w-full h-12 rounded-full bg-[#1D1D1F] text-white text-[15px] font-medium">
+        Iniciar proyecto
+      </a>
+      <a href="https://wa.me/593939665581?text=Hola%20Jeyko%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full h-12 rounded-full bg-[#F5F5F7] text-[#1D1D1F] text-[14px] font-medium border border-black/[0.08]">
+        WhatsApp · +593 93 966 5581
+      </a>
+      <div class="pt-1 flex items-center justify-center gap-3 text-[13px] text-[#6E6E73]">
+        <a href="https://www.instagram.com/jeykovisuals/" target="_blank" rel="noopener noreferrer" class="hover:text-[#1D1D1F]">@jeykovisuals</a>
+        <span aria-hidden="true">·</span>
+        <a href="mailto:jeykovisuals@gmail.com" class="hover:text-[#1D1D1F]">jeykovisuals@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- =====================================================================
+         2. HERO & SHOWREEL CINEMATOGRÁFICO (Sobre #FFFFFF)
+    ===================================================================== -->
+    <section class="bg-[#FFFFFF] pt-16 pb-20 sm:pt-24 sm:pb-28 lg:pt-28 lg:pb-32">
+      <div class="max-w-[1120px] mx-auto px-5 sm:px-8">
+
+        <!-- Bloque Editorial Hero -->
+        <div class="max-w-[840px] mx-auto text-center">
+          <p class="reveal opacity-0 translate-y-4 transition-all duration-700 ease-apple text-[14px] font-normal tracking-[-0.01em] text-[#6E6E73]">
+            Edición de video · Motion graphics · Diseño gráfico
+          </p>
+
+          <h1 class="reveal opacity-0 translate-y-4 transition-all duration-700 delay-75 ease-apple mt-5 text-[clamp(2.55rem,5.8vw,4.65rem)] font-semibold leading-[1.04] tracking-[-0.04em] text-[#1D1D1F]">
+            Edición y diseño visual con precisión de estudio.
+          </h1>
+
+          <p class="reveal opacity-0 translate-y-4 transition-all duration-700 delay-150 ease-apple mt-6 max-w-[620px] mx-auto text-[19px] sm:text-[21px] leading-[1.48] font-normal tracking-[-0.015em] text-[#6E6E73]">
+            Producción audiovisual, motion graphics y diseño gráfico para YouTubers, marcas y empresas que buscan claridad, ritmo y una identidad visual consistente.
+          </p>
+
+          <!-- Acciones Principales -->
+          <div class="reveal opacity-0 translate-y-4 transition-all duration-700 delay-200 ease-apple mt-9 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-7">
+            <a href="#contacto" class="w-full sm:w-auto inline-flex items-center justify-center h-[46px] px-7 rounded-full bg-[#1D1D1F] text-white text-[15px] font-medium hover:bg-black transition-colors duration-200 ease-apple focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3] focus-visible:ring-offset-2">
+              Iniciar proyecto
+            </a>
+
+            <a href="#trabajo" class="inline-flex items-center gap-1 text-[16px] font-normal text-[#0071E3] hover:text-[#0077ED] hover:underline underline-offset-4 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3] rounded-md px-1 py-1">
+              <span>Ver trabajo</span>
+              <svg class="w-4 h-4 translate-y-[0.5px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 6 15 12 9 18" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Marco Cinematográfico 16:9 del Showreel -->
+        <div class="reveal opacity-0 translate-y-4 transition-all duration-700 delay-300 ease-apple mt-14 sm:mt-20">
+          <div
+            onclick="openShowreelModal()"
+            role="button"
+            tabindex="0"
+            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openShowreelModal();}"
+            aria-label="Reproducir Showreel 2026 de Jeyko Visuals"
+            class="group relative w-full aspect-video rounded-[20px] sm:rounded-[24px] bg-[#0A0A0C] overflow-hidden cursor-pointer border border-black/[0.08] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3] focus-visible:ring-offset-4"
+          >
+            <!-- Composición cinematográfica monocromática con guías discretas 2.39:1 -->
+            <svg class="w-full h-full object-cover transition-transform duration-700 ease-apple group-hover:scale-[1.02]" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="studioKeyLight" x1="180" y1="60" x2="1040" y2="660" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#202024" />
+                  <stop offset="50%" stop-color="#101013" />
+                  <stop offset="100%" stop-color="#070709" />
+                </linearGradient>
+                <linearGradient id="monolithPlane" x1="420" y1="150" x2="860" y2="570" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#2A2A2E" />
+                  <stop offset="100%" stop-color="#131316" />
+                </linearGradient>
+                <linearGradient id="softBeam" x1="0" y1="0" x2="900" y2="720" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.08" />
+                  <stop offset="65%" stop-color="#FFFFFF" stop-opacity="0.015" />
+                  <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+                </linearGradient>
+              </defs>
+
+              <rect width="1280" height="720" fill="url(#studioKeyLight)" />
+              <polygon points="0,0 560,0 920,720 180,720" fill="url(#softBeam)" />
+
+              <!-- Planos arquitectónicos sobrios -->
+              <rect x="310" y="138" width="660" height="444" fill="url(#monolithPlane)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+              <line x1="640" y1="138" x2="640" y2="582" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+              <line x1="310" y1="360" x2="970" y2="360" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+
+              <!-- Guías de relación de aspecto 2.39:1 -->
+              <line x1="64" y1="92" x2="1216" y2="92" stroke="rgba(255,255,255,0.14)" stroke-width="1" />
+              <line x1="64" y1="628" x2="1216" y2="628" stroke="rgba(255,255,255,0.14)" stroke-width="1" />
+
+              <!-- Esquinas de encuadre 2.39:1 -->
+              <path d="M64 114V92H86" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" />
+              <path d="M1216 114V92H1194" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" />
+              <path d="M64 606V628H86" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" />
+              <path d="M1216 606V628H1194" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" />
+
+              <!-- Marcas de registro centrales -->
+              <line x1="630" y1="360" x2="650" y2="360" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+              <line x1="640" y1="350" x2="640" y2="370" stroke="rgba(255,255,255,0.2)" stroke-width="1" />
+
+              <!-- Escala horizontal de fotogramas -->
+              <g stroke="rgba(255,255,255,0.14)" stroke-width="1">
+                <line x1="160" y1="658" x2="160" y2="668" />
+                <line x1="280" y1="660" x2="280" y2="668" />
+                <line x1="400" y1="658" x2="400" y2="668" />
+                <line x1="520" y1="660" x2="520" y2="668" />
+                <line x1="640" y1="654" x2="640" y2="668" stroke="rgba(255,255,255,0.45)" />
+                <line x1="760" y1="660" x2="760" y2="668" />
+                <line x1="880" y1="658" x2="880" y2="668" />
+                <line x1="1000" y1="660" x2="1000" y2="668" />
+                <line x1="1120" y1="658" x2="1120" y2="668" />
+              </g>
+            </svg>
+
+            <!-- Metadatos superiores -->
+            <div class="absolute top-4 left-5 right-5 sm:top-6 sm:left-8 sm:right-8 flex items-center justify-between pointer-events-none">
+              <span class="text-[11px] sm:text-[12px] font-medium tracking-[0.14em] uppercase text-white/75">
+                SHOWREEL 2026
+              </span>
+              <span class="text-[11px] sm:text-[12px] font-normal tracking-[0.12em] uppercase text-white/55">
+                2.39:1 · 4K · 60 FPS
+              </span>
+            </div>
+
+            <!-- Botón de reproducción circular elegante -->
+            <div class="absolute inset-0 flex flex-col items-center justify-center gap-3">
+              <div class="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/[0.14] backdrop-blur-md border border-white/[0.24] flex items-center justify-center transition-all duration-300 ease-apple group-hover:scale-105 group-hover:bg-white/[0.22]">
+                <svg class="w-6 h-6 sm:w-7 sm:h-7 text-white translate-x-[1.5px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M7.5 5.25a.75.75 0 011.14-.64l11.25 6.75a.75.75 0 010 1.28L8.64 19.39a.75.75 0 01-1.14-.64V5.25z" />
+                </svg>
+              </div>
+              <span class="text-[12px] font-normal tracking-[0.04em] text-white/70 opacity-90 group-hover:text-white transition-colors">
+                Reproducir showreel
+              </span>
+            </div>
+
+            <!-- Timecode minimalista inferior -->
+            <div class="absolute bottom-4 left-5 right-5 sm:bottom-6 sm:left-8 sm:right-8 flex items-center gap-4 pointer-events-none">
+              <span class="text-[11px] font-normal tracking-[0.08em] text-white/55 tabular-nums">00:00:00:00</span>
+              <div class="flex-1 h-[1.5px] bg-white/15 overflow-hidden rounded-full">
+                <div class="w-1/3 h-full bg-white/75"></div>
+              </div>
+              <span class="text-[11px] font-normal tracking-[0.08em] text-white/75 tabular-nums">00:00:45:00</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         3. PORTAFOLIO ('TRABAJO SELECCIONADO') + BLOQUE EDITORIAL INSTAGRAM
+    ===================================================================== -->
+    <section id="trabajo" class="bg-[#FFFFFF] py-20 sm:py-28 scroll-mt-[52px] border-t border-black/[0.08]">
+      <div class="max-w-[1120px] mx-auto px-5 sm:px-8">
+
+        <!-- Encabezado y Control Segmentado estilo Apple -->
+        <div class="reveal opacity-0 translate-y-4 transition-all duration-700 ease-apple flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 sm:mb-16">
+          <div>
+            <p class="text-[13px] font-medium text-[#6E6E73] mb-2">Portafolio</p>
+            <h2 class="text-[32px] sm:text-[42px] font-semibold leading-[1.08] tracking-[-0.038em] text-[#1D1D1F]">
+              Trabajo seleccionado
+            </h2>
+          </div>
+
+          <!-- Segmented Control -->
+          <div id="portfolio-filters" role="tablist" aria-label="Filtrar proyectos por categoría" class="inline-flex flex-wrap items-center gap-1 p-1 rounded-full bg-[#F5F5F7] border border-black/[0.06] self-start lg:self-auto">
+            <button type="button" data-filter="all" role="tab" aria-selected="true" class="segment-btn px-4 py-1.5 rounded-full text-[13px] font-medium transition-all duration-200 ease-apple bg-[#FFFFFF] text-[#1D1D1F] shadow-segment">
+              Todos
+            </button>
+            <button type="button" data-filter="video" role="tab" aria-selected="false" class="segment-btn px-4 py-1.5 rounded-full text-[13px] font-normal transition-all duration-200 ease-apple text-[#6E6E73] hover:text-[#1D1D1F]">
+              Edición de Video
+            </button>
+            <button type="button" data-filter="motion" role="tab" aria-selected="false" class="segment-btn px-4 py-1.5 rounded-full text-[13px] font-normal transition-all duration-200 ease-apple text-[#6E6E73] hover:text-[#1D1D1F]">
+              Motion Graphics
+            </button>
+            <button type="button" data-filter="shorts" role="tab" aria-selected="false" class="segment-btn px-4 py-1.5 rounded-full text-[13px] font-normal transition-all duration-200 ease-apple text-[#6E6E73] hover:text-[#1D1D1F]">
+              Shorts &amp; Reels
+            </button>
+            <button type="button" data-filter="design" role="tab" aria-selected="false" class="segment-btn px-4 py-1.5 rounded-full text-[13px] font-normal transition-all duration-200 ease-apple text-[#6E6E73] hover:text-[#1D1D1F]">
+              Diseño Gráfico
+            </button>
+          </div>
+        </div>
+
+        <!-- Grilla limpia de 2 columnas (sin badges ni texto sobre las imágenes) -->
+        <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 sm:gap-y-16">
+          <!-- Renderizado dinámico mediante JavaScript -->
+        </div>
+
+        <!-- Bloque Editorial Dedicado a Instagram (@jeykovisuals) -->
+        <div class="reveal opacity-0 translate-y-4 transition-all duration-700 ease-apple mt-16 sm:mt-24 rounded-[22px] bg-[#F5F5F7] border border-black/[0.08] p-7 sm:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="max-w-[640px]">
+            <p class="text-[12px] font-medium uppercase tracking-[0.08em] text-[#6E6E73] mb-2">
+              Archivo continuo · Instagram
+            </p>
+            <h3 class="text-[22px] sm:text-[26px] font-semibold leading-[1.16] tracking-[-0.028em] text-[#1D1D1F]">
+              Más piezas recientes en @jeykovisuals
+            </h3>
+            <p class="mt-2.5 text-[15px] leading-[1.6] text-[#6E6E73]">
+              Publico avances de edición, reels recientes, experimentos de motion graphics y diseños gráficos que no forman parte de esta selección curada.
+            </p>
+          </div>
+
+          <div class="flex-shrink-0">
+            <a href="https://www.instagram.com/jeykovisuals/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 h-[44px] px-6 rounded-full bg-[#FFFFFF] border border-black/[0.08] text-[14px] font-medium text-[#0071E3] hover:text-[#0077ED] hover:border-black/[0.16] transition-all duration-200 ease-apple focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3]">
+              <span>Ver Instagram (@jeykovisuals)</span>
+              <svg class="w-4 h-4 translate-y-[0.5px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 6 15 12 9 18" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         4. SERVICIOS Y AUDIENCIA (Sobre superficie #F5F5F7)
+    ===================================================================== -->
+    <section id="servicios" class="bg-[#F5F5F7] py-24 sm:py-32 scroll-mt-[52px]">
+      <div class="max-w-[1120px] mx-auto px-5 sm:px-8">
+
+        <div class="reveal opacity-0 translate-y-4 transition-all duration-700 ease-apple max-w-[680px] mb-14 sm:mb-16">
+          <p class="text-[13px] font-medium text-[#6E6E73] mb-2">Servicios</p>
+          <h2 class="text-[32px] sm:text-[44px] font-semibold leading-[1.08] tracking-[-0.04em] text-[#1D1D1F]">
+            Tres disciplinas. Un mismo criterio visual.
+          </h2>
+        </div>
+
+        <!-- 3 Tarjetas Blancas Sobrias -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+          <!-- Servicio 01: Edición de Video -->
+          <article class="reveal opacity-0 translate-y-4 transition-all duration-700 ease-apple flex flex-col justify-between bg-[#FFFFFF] rounded-[22px] p-8 sm:p-9 border border-black/[0.08]">
+            <div>
+              <p class="text-[12px] font-medium tracking-[0.06em] uppercase text-[#86868B] mb-5">01</p>
+              <h3 class="text-[22px] font-semibold tracking-[-0.025em] text-[#1D1D1F] mb-3.5">
+                Edición de Video
+              </h3>
+              <p class="text-[15px] leading-[1.6] text-[#6E6E73] mb-7">
+                Montaje narrativo para canales de YouTube, documentales cortos, entrevistas y campañas digitales. Priorizo el ritmo, la claridad del audio, el color consistente y la retención real.
+              </p>
+
+              <ul class="space-y-2.5 pt-6 border-t border-black/[0.08] text-[14px] text-[#1D1D1F]">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 mt-[3px] flex-shrink-0 text-[#1D1D1F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Estructura narrativa y ritmo de montaje</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 mt-[3px] flex-shrink-0 text-[#1D1D1F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Diseño sonoro, limpieza de voz y música</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 mt-[3px] flex-shrink-0 text-[#1D1D1F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Corrección de color en DaVinci Resolve Studio</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-4">
+              <button type="button" onclick="selectServiceAndScroll('Edición de Video')" class="inline-flex items-center gap-1 text-[14px] font-medium text-[#0071E3] hover:text-[#0077ED] hover:underline underline-offset-4 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3] rounded">
+                <span>Consultar edición de video</span>
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18" /></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Servicio 02: Motion Graphics -->
+          <article class="reveal opacity-0 translate-y-4 transition-all duration-700 delay-75 ease-apple flex flex-col justify-between bg-[#FFFFFF] rounded-[22px] p-8 sm:p-9 border border-black/[0.08]">
+            <div>
+              <p class="text-[12px] font-medium tracking-[0.06em] uppercase text-[#86868B] mb-5">02</p>
+              <h3 class="text-[22px] font-semibold tracking-[-0.025em] text-[#1D1D1F] mb-3.5">
+                Motion Graphics
+              </h3>
+              <p class="text-[15px] leading-[1.6] text-[#6E6E73] mb-7">
+                Animación de tipografía, gráficos informativos, logotipos, intros sobrias y piezas explicativas construidas en Fusion e integradas con activos vectoriales de Illustrator.
+              </p>
+
+              <ul class="space-y-2.5 pt-6 border-t border-black/[0.08] text-[14px] text-[#1D1D1F]">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 mt-[3px] flex-shrink-0 text-[#1D1D1F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Tipografía cinética y títulos modulares</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 mt-[3px] flex-shrink-0 text-[#1D1D1F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Gráficos de datos y piezas explicativas</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 mt-[3px] flex-shrink-0 text-[#1D1D1F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Animación de identidad y sistemas de marca</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-4">
+              <button type="button" onclick="selectServiceAndScroll('Motion Graphics')" class="inline-flex items-center gap-1 text-[14px] font-medium text-[#0071E3] hover:text-[#0077ED] hover:underline underline-offset-4 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3] rounded">
+                <span>Consultar motion graphics</span>
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18" /></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- Servicio 03: Diseño Gráfico -->
+          <article class="reveal opacity-0 translate-y-4 transition-all duration-700 delay-150 ease-apple flex flex-col justify-between bg-[#FFFFFF] rounded-[22px] p-8 sm:p-9 border border-black/[0.08]">
+            <div>
+              <p class="text-[12px] font-medium tracking-[0.06em] uppercase text-[#86868B] mb-5">03</p>
+              <h3 class="text-[22px] font-semibold tracking-[-0.025em] text-[#1D1D1F] mb-3.5">
+                Diseño Gráfico
+              </h3>
+              <p class="text-[15px] leading-[1.6] text-[#6E6E73] mb-7">
+                Miniaturas de alto impacto visual, diseño vectorial y branding en Illustrator, composición fotográfica en Photoshop e ilustración personalizada en Krita para canales y empresas.
+              </p>
+
+              <ul class="space-y-2.5 pt-6 border-t border-black/[0.08] text-[14px] text-[#1D1D1F]">
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 mt-[3px] flex-shrink-0 text-[#1D1D1F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Miniaturas de YouTube con jerarquía clara</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 mt-[3px] flex-shrink-0 text-[#1D1D1F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Branding vectorial y sistemas en Illustrator</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <svg class="w-4 h-4 mt-[3px] flex-shrink-0 text-[#1D1D1F]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                  <span>Piezas para campañas y redes sociales</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-4">
+              <button type="button" onclick="selectServiceAndScroll('Diseño Gráfico')" class="inline-flex items-center gap-1 text-[14px] font-medium text-[#0071E3] hover:text-[#0077ED] hover:underline underline-offset-4 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3] rounded">
+                <span>Consultar diseño gráfico</span>
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18" /></svg>
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Banda Editorial 'Para quién trabajo' -->
+        <div class="reveal opacity-0 translate-y-4 transition-all duration-700 ease-apple mt-20 pt-14 border-t border-black/[0.08]">
+          <p class="text-[13px] font-medium text-[#6E6E73] mb-8">Para quién trabajo</p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 md:divide-x md:divide-black/[0.08]">
+
+            <div class="md:pr-8">
+              <h3 class="text-[17px] font-semibold tracking-[-0.02em] text-[#1D1D1F] mb-2">
+                YouTubers &amp; Creadores
+              </h3>
+              <p class="text-[14px] leading-[1.6] text-[#6E6E73]">
+                Publicación constante sin perder identidad. Ritmo de montaje, gráficos a medida y miniaturas coherentes con la voz del canal.
+              </p>
+            </div>
+
+            <div class="md:px-8">
+              <h3 class="text-[17px] font-semibold tracking-[-0.02em] text-[#1D1D1F] mb-2">
+                Marcas &amp; Startups
+              </h3>
+              <p class="text-[14px] leading-[1.6] text-[#6E6E73]">
+                Lanzamientos de producto, anuncios verticales y sistemas visuales diseñados para comunicar valor con sobriedad y claridad.
+              </p>
+            </div>
+
+            <div class="md:pl-8">
+              <h3 class="text-[17px] font-semibold tracking-[-0.02em] text-[#1D1D1F] mb-2">
+                Empresas &amp; Agencias
+              </h3>
+              <p class="text-[14px] leading-[1.6] text-[#6E6E73]">
+                Apoyo de postproducción, motion graphics y diseño gráfico integrado a calendarios corporativos con entregas ordenadas y puntuales.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         5. PROCESO Y ENTORNO DE PRODUCCIÓN (Sobre #FFFFFF)
+    ===================================================================== -->
+    <section id="proceso" class="bg-[#FFFFFF] py-24 sm:py-32 scroll-mt-[52px]">
+      <div class="max-w-[1120px] mx-auto px-5 sm:px-8">
+
+        <div class="reveal opacity-0 translate-y-4 transition-all duration-700 ease-apple max-w-[640px] mb-14 sm:mb-20">
+          <p class="text-[13px] font-medium text-[#6E6E73] mb-2">Proceso</p>
+          <h2 class="text-[32px] sm:text-[44px] font-semibold leading-[1.08] tracking-[-0.04em] text-[#1D1D1F]">
+            Un flujo claro, de principio a fin.
+          </h2>
+        </div>
+
+        <!-- 4 Pasos Numerados (01 a 04) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+
+          <div class="reveal opacity-0 translate-y-4 transition-all duration-700 ease-apple pt-6 border-t border-black/[0.08]">
+            <span class="block text-[13px] font-medium text-[#86868B] tabular-nums mb-4">01</span>
+            <h3 class="text-[17px] font-semibold tracking-[-0.02em] text-[#1D1D1F] mb-2.5">
+              Diagnóstico y brief
+            </h3>
+            <p class="text-[14px] leading-[1.6] text-[#6E6E73]">
+              Definimos objetivos, formato, referencias visuales y fechas de publicación antes de iniciar la producción.
+            </p>
+          </div>
+
+          <div class="reveal opacity-0 translate-y-4 transition-all duration-700 delay-75 ease-apple pt-6 border-t border-black/[0.08]">
+            <span class="block text-[13px] font-medium text-[#86868B] tabular-nums mb-4">02</span>
+            <h3 class="text-[17px] font-semibold tracking-[-0.02em] text-[#1D1D1F] mb-2.5">
+              Estructura y primer corte
+            </h3>
+            <p class="text-[14px] leading-[1.6] text-[#6E6E73]">
+              Construyo la narrativa base, el ritmo principal o el boceto gráfico para validar la dirección desde temprano.
+            </p>
+          </div>
+
+          <div class="reveal opacity-0 translate-y-4 transition-all duration-700 delay-150 ease-apple pt-6 border-t border-black/[0.08]">
+            <span class="block text-[13px] font-medium text-[#86868B] tabular-nums mb-4">03</span>
+            <h3 class="text-[17px] font-semibold tracking-[-0.02em] text-[#1D1D1F] mb-2.5">
+              Acabado, motion y color
+            </h3>
+            <p class="text-[14px] leading-[1.6] text-[#6E6E73]">
+              Refinamiento de animaciones, composición gráfica, limpieza sonora y corrección de color con detalle técnico.
+            </p>
+          </div>
+
+          <div class="reveal opacity-0 translate-y-4 transition-all duration-700 delay-200 ease-apple pt-6 border-t border-black/[0.08]">
+            <span class="block text-[13px] font-medium text-[#86868B] tabular-nums mb-4">04</span>
+            <h3 class="text-[17px] font-semibold tracking-[-0.02em] text-[#1D1D1F] mb-2.5">
+              Revisión y entrega final
+            </h3>
+            <p class="text-[14px] leading-[1.6] text-[#6E6E73]">
+              Aplicamos ajustes puntuales y exporto los archivos maestros optimizados para cada plataforma.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Barra 'Entorno de producción' actualizada estrictamente con las 5 herramientas -->
+        <div class="reveal opacity-0 translate-y-4 transition-all duration-700 ease-apple mt-16 sm:mt-20 pt-8 border-t border-black/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <span class="text-[12px] font-medium uppercase tracking-[0.08em] text-[#86868B]">
+            Entorno de producción
+          </span>
+          <p class="text-[14px] font-normal tracking-[-0.01em] text-[#1D1D1F]">
+            DaVinci Resolve Studio · Fusion · Photoshop · Illustrator · Krita
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         6. PREGUNTAS FRECUENTES (5 Preguntas, sobre #F5F5F7)
+    ===================================================================== -->
+    <section id="preguntas" class="bg-[#F5F5F7] py-20 sm:py-28 scroll-mt-[52px]">
+      <div class="max-w-[780px] mx-auto px-5 sm:px-8">
+
+        <div class="reveal opacity-0 translate-y-4 transition-all duration-700 ease-apple mb-12">
+          <p class="text-[13px] font-medium text-[#6E6E73] mb-2">Preguntas frecuentes</p>
+          <h2 class="text-[28px] sm:text-[36px] font-semibold leading-[1.1] tracking-[-0.035em] text-[#1D1D1F]">
+            Detalles prácticos antes de comenzar.
+          </h2>
+        </div>
+
+        <!-- Acordeón minimalista con icono '+' que rota 45° -->
+        <div id="faq-accordion" class="reveal opacity-0 translate-y-4 transition-all duration-700 ease-apple border-t border-black/[0.08] divide-y divide-black/[0.08]">
+
+          <!-- Pregunta 1 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger w-full py-6 flex items-center justify-between gap-6 text-left focus:outline-none group" aria-expanded="true">
+              <span class="text-[17px] sm:text-[18px] font-medium tracking-[-0.015em] text-[#1D1D1F] group-hover:text-[#0071E3] transition-colors duration-200">
+                ¿Cuáles son los tiempos de entrega habituales?
+              </span>
+              <span class="faq-plus flex-shrink-0 text-[#6E6E73] transition-transform duration-300 ease-apple rotate-45">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-panel pb-6 pr-8 text-[15px] leading-[1.65] text-[#6E6E73]">
+              Las piezas verticales (Shorts y Reels) y las miniaturas se entregan habitualmente en 24 a 48 horas hábiles. Los videos de formato largo para YouTube, campañas o animaciones de motion graphics toman entre 3 y 5 días hábiles según la duración y complejidad.
+            </div>
+          </div>
+
+          <!-- Pregunta 2 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger w-full py-6 flex items-center justify-between gap-6 text-left focus:outline-none group" aria-expanded="false">
+              <span class="text-[17px] sm:text-[18px] font-medium tracking-[-0.015em] text-[#1D1D1F] group-hover:text-[#0071E3] transition-colors duration-200">
+                ¿Cómo envío mis grabaciones y recursos de marca?
+              </span>
+              <span class="faq-plus flex-shrink-0 text-[#6E6E73] transition-transform duration-300 ease-apple">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-panel hidden pb-6 pr-8 text-[15px] leading-[1.65] text-[#6E6E73]">
+              Puedes compartir tus clips, guiones, logotipos y tipografías mediante Google Drive, Dropbox, Frame.io o WeTransfer. En acuerdos mensuales organizo una carpeta compartida por episodio o campaña para agilizar cada entrega.
+            </div>
+          </div>
+
+          <!-- Pregunta 3 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger w-full py-6 flex items-center justify-between gap-6 text-left focus:outline-none group" aria-expanded="false">
+              <span class="text-[17px] sm:text-[18px] font-medium tracking-[-0.015em] text-[#1D1D1F] group-hover:text-[#0071E3] transition-colors duration-200">
+                ¿Cuántas rondas de revisión se incluyen?
+              </span>
+              <span class="faq-plus flex-shrink-0 text-[#6E6E73] transition-transform duration-300 ease-apple">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-panel hidden pb-6 pr-8 text-[15px] leading-[1.65] text-[#6E6E73]">
+              Cada proyecto incluye dos rondas de revisión estructuradas para pulir ritmo, textos, gráficos, audio o color. Trabajamos con anotaciones por código de tiempo para aplicar cambios precisos sin retrasar tu calendario.
+            </div>
+          </div>
+
+          <!-- Pregunta 4 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger w-full py-6 flex items-center justify-between gap-6 text-left focus:outline-none group" aria-expanded="false">
+              <span class="text-[17px] sm:text-[18px] font-medium tracking-[-0.015em] text-[#1D1D1F] group-hover:text-[#0071E3] transition-colors duration-200">
+                ¿Trabajas por proyecto puntual o mediante paquetes mensuales?
+              </span>
+              <span class="faq-plus flex-shrink-0 text-[#6E6E73] transition-transform duration-300 ease-apple">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-panel hidden pb-6 pr-8 text-[15px] leading-[1.65] text-[#6E6E73]">
+              Ofrezco ambas modalidades. Podemos iniciar con una pieza puntual para validar criterio y ritmo de trabajo, o establecer un paquete mensual con capacidad reservada para canales de YouTube, marcas y agencias.
+            </div>
+          </div>
+
+          <!-- Pregunta 5 -->
+          <div class="faq-item">
+            <button type="button" class="faq-trigger w-full py-6 flex items-center justify-between gap-6 text-left focus:outline-none group" aria-expanded="false">
+              <span class="text-[17px] sm:text-[18px] font-medium tracking-[-0.015em] text-[#1D1D1F] group-hover:text-[#0071E3] transition-colors duration-200">
+                ¿Trabajas con clientes fuera de Ecuador y en qué formatos entregas?
+              </span>
+              <span class="faq-plus flex-shrink-0 text-[#6E6E73] transition-transform duration-300 ease-apple">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </span>
+            </button>
+            <div class="faq-panel hidden pb-6 pr-8 text-[15px] leading-[1.65] text-[#6E6E73]">
+              Sí, trabajo de forma 100% remota con creadores y empresas en toda Latinoamérica, Estados Unidos y España. Entrego en 4K o Full HD (16:9, 9:16 o 1:1) en H.264/ProRes, junto con archivos finales en PNG, JPG, SVG o PDF según el proyecto.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         7. CONTACTO Y BRIEF INTERACTIVO CON DATOS REALES (Sobre #FFFFFF)
+    ===================================================================== -->
+    <section id="contacto" class="bg-[#FFFFFF] py-24 sm:py-32 scroll-mt-[52px]">
+      <div class="max-w-[1120px] mx-auto px-5 sm:px-8">
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+          <!-- Columna Izquierda: Canales directos -->
+          <div class="reveal opacity-0 translate-y-4 transition-all duration-700 ease-apple lg:col-span-5">
+            <p class="text-[13px] font-medium text-[#6E6E73] mb-2">Canales directos</p>
+            <h2 class="text-[32px] sm:text-[42px] font-semibold leading-[1.08] tracking-[-0.04em] text-[#1D1D1F]">
+              Hablemos de tu próximo proyecto.
+            </h2>
+            <p class="mt-5 text-[16px] leading-[1.6] text-[#6E6E73]">
+              Comparte qué estás produciendo, el volumen de piezas y tu fecha ideal de publicación. Respondo en menos de 24 horas hábiles.
+            </p>
+
+            <!-- Lista de canales directos reales -->
+            <div class="mt-10 pt-8 border-t border-black/[0.08] space-y-6">
+
+              <!-- WhatsApp real -->
+              <div>
+                <p class="text-[12px] font-medium uppercase tracking-[0.06em] text-[#86868B] mb-1.5">WhatsApp</p>
+                <a href="https://wa.me/593939665581?text=Hola%20Jeyko%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[16px] font-medium text-[#0071E3] hover:text-[#0077ED] hover:underline underline-offset-4 transition-colors">
+                  <span>+593 93 966 5581</span>
+                  <svg class="w-4 h-4 translate-y-[0.5px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 6 15 12 9 18" />
+                  </svg>
+                </a>
+                <p class="mt-1 text-[13px] text-[#6E6E73]">Respuesta directa para cotizaciones y agenda.</p>
+              </div>
+
+              <!-- Correo electrónico + Copiar correo -->
+              <div>
+                <p class="text-[12px] font-medium uppercase tracking-[0.06em] text-[#86868B] mb-1.5">Correo electrónico</p>
+                <div class="flex flex-wrap items-center gap-3">
+                  <a href="mailto:jeykovisuals@gmail.com" class="text-[16px] font-medium text-[#1D1D1F] hover:text-[#0071E3] transition-colors">
+                    jeykovisuals@gmail.com
+                  </a>
+                  <button id="copy-email-btn" type="button" onclick="copyEmailAddress()" class="inline-flex items-center px-3 py-1 rounded-full text-[12px] font-medium text-[#1D1D1F] bg-[#F5F5F7] border border-black/[0.08] hover:bg-black/[0.06] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3]">
+                    Copiar correo
+                  </button>
+                </div>
+              </div>
+
+              <!-- Instagram real -->
+              <div>
+                <p class="text-[12px] font-medium uppercase tracking-[0.06em] text-[#86868B] mb-1.5">Instagram</p>
+                <a href="https://www.instagram.com/jeykovisuals/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[16px] font-normal text-[#0071E3] hover:text-[#0077ED] hover:underline underline-offset-4 transition-colors">
+                  <span>@jeykovisuals</span>
+                  <svg class="w-4 h-4 translate-y-[0.5px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="9 6 15 12 9 18" />
+                  </svg>
+                </a>
+                <p class="mt-1 text-[13px] text-[#6E6E73]">Trabajos adicionales, reels recientes y proceso creativo.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Formulario de brief limpio -->
+          <div class="reveal opacity-0 translate-y-4 transition-all duration-700 delay-100 ease-apple lg:col-span-7">
+            <div class="bg-[#F5F5F7] rounded-[22px] p-6 sm:p-9 border border-black/[0.08]">
+
+              <form id="brief-form" class="space-y-6" novalidate>
+
+                <!-- Chips seleccionables de servicio -->
+                <div>
+                  <span class="block text-[13px] font-medium text-[#1D1D1F] mb-2.5">Servicio de interés</span>
+                  <input id="field-service" name="service" type="hidden" value="Edición de Video" />
+                  <div id="service-chips" class="flex flex-wrap gap-2" role="group" aria-label="Seleccionar servicio">
+                    <button type="button" data-service="Edición de Video" aria-pressed="true" class="service-chip px-4 py-2 rounded-full text-[13px] font-medium transition-all duration-200 ease-apple bg-[#1D1D1F] text-white border border-[#1D1D1F]">
+                      Edición de Video
+                    </button>
+                    <button type="button" data-service="Motion Graphics" aria-pressed="false" class="service-chip px-4 py-2 rounded-full text-[13px] font-normal transition-all duration-200 ease-apple bg-[#FFFFFF] text-[#1D1D1F] border border-black/[0.1] hover:border-black/[0.25]">
+                      Motion Graphics
+                    </button>
+                    <button type="button" data-service="Diseño Gráfico" aria-pressed="false" class="service-chip px-4 py-2 rounded-full text-[13px] font-normal transition-all duration-200 ease-apple bg-[#FFFFFF] text-[#1D1D1F] border border-black/[0.1] hover:border-black/[0.25]">
+                      Diseño Gráfico
+                    </button>
+                    <button type="button" data-service="Paquete integral" aria-pressed="false" class="service-chip px-4 py-2 rounded-full text-[13px] font-normal transition-all duration-200 ease-apple bg-[#FFFFFF] text-[#1D1D1F] border border-black/[0.1] hover:border-black/[0.25]">
+                      Paquete integral
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Nombre + Correo o canal/marca -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="field-name" class="block text-[13px] font-medium text-[#1D1D1F] mb-2">Nombre</label>
+                    <input id="field-name" name="name" type="text" required autocomplete="name" placeholder="Tu nombre" class="w-full h-[46px] px-4 rounded-[12px] bg-[#FFFFFF] border border-black/[0.1] text-[15px] text-[#1D1D1F] placeholder-[#86868B] focus:outline-none focus:border-[#0071E3] focus:ring-2 focus:ring-[#0071E3]/20 transition-all duration-200" />
+                  </div>
+
+                  <div>
+                    <label for="field-contact" class="block text-[13px] font-medium text-[#1D1D1F] mb-2">Correo o canal / marca</label>
+                    <input id="field-contact" name="contact" type="text" required placeholder="correo@empresa.com o @tucanal" class="w-full h-[46px] px-4 rounded-[12px] bg-[#FFFFFF] border border-black/[0.1] text-[15px] text-[#1D1D1F] placeholder-[#86868B] focus:outline-none focus:border-[#0071E3] focus:ring-2 focus:ring-[#0071E3]/20 transition-all duration-200" />
+                  </div>
+                </div>
+
+                <!-- Plazo estimado -->
+                <div>
+                  <label for="field-timeline" class="block text-[13px] font-medium text-[#1D1D1F] mb-2">Plazo estimado</label>
+                  <select id="field-timeline" name="timeline" class="w-full h-[46px] px-4 rounded-[12px] bg-[#FFFFFF] border border-black/[0.1] text-[15px] text-[#1D1D1F] focus:outline-none focus:border-[#0071E3] focus:ring-2 focus:ring-[#0071E3]/20 transition-all duration-200">
+                    <option value="Esta semana">Esta semana</option>
+                    <option value="En 1 a 2 semanas" selected>En 1 a 2 semanas</option>
+                    <option value="Este mes">Este mes</option>
+                    <option value="Colaboración mensual continua">Colaboración mensual continua</option>
+                    <option value="Aún por definir">Aún por definir</option>
+                  </select>
+                </div>
+
+                <!-- Detalles del proyecto -->
+                <div>
+                  <label for="field-details" class="block text-[13px] font-medium text-[#1D1D1F] mb-2">Detalles del proyecto</label>
+                  <textarea id="field-details" name="details" rows="4" required placeholder="Cuéntame el formato que necesitas, duración o cantidad de piezas, referencias y objetivo principal." class="w-full p-4 rounded-[12px] bg-[#FFFFFF] border border-black/[0.1] text-[15px] text-[#1D1D1F] placeholder-[#86868B] focus:outline-none focus:border-[#0071E3] focus:ring-2 focus:ring-[#0071E3]/20 transition-all duration-200 resize-y"></textarea>
+                </div>
+
+                <!-- Mensaje de validación limpio -->
+                <p id="form-error" role="alert" class="hidden text-[13px] text-[#BF2600]"></p>
+
+                <!-- Botón principal WhatsApp + Botón secundario Correo -->
+                <div class="pt-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                  <button type="submit" class="flex-1 inline-flex items-center justify-center h-[48px] px-6 rounded-full bg-[#1D1D1F] text-white text-[15px] font-medium hover:bg-black transition-colors duration-200 ease-apple focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3] focus-visible:ring-offset-2">
+                    Enviar brief por WhatsApp
+                  </button>
+
+                  <button type="button" onclick="sendBriefByEmail()" class="inline-flex items-center justify-center h-[48px] px-6 rounded-full bg-[#FFFFFF] text-[#1D1D1F] text-[14px] font-medium border border-black/[0.12] hover:border-black/[0.28] transition-colors duration-200 ease-apple focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3]">
+                    Enviar por correo
+                  </button>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =====================================================================
+       8. FOOTER MINIMALISTA CON HAIRLINE SUPERIOR
+  ===================================================================== -->
+  <footer class="bg-[#F5F5F7] border-t border-black/[0.08] py-8">
+    <div class="max-w-[1120px] mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] sm:text-[13px] text-[#6E6E73]">
+      <p>© 2026 Jeyko Visuals. Todos los derechos reservados.</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5">
+        <a href="https://wa.me/593939665581?text=Hola%20Jeyko%2C%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" class="hover:text-[#1D1D1F] transition-colors">WhatsApp (+593 93 966 5581)</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://www.instagram.com/jeykovisuals/" target="_blank" rel="noopener noreferrer" class="hover:text-[#1D1D1F] transition-colors">@jeykovisuals</a>
+        <span aria-hidden="true">·</span>
+        <a href="mailto:jeykovisuals@gmail.com" class="hover:text-[#1D1D1F] transition-colors">jeykovisuals@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       NOTIFICACIÓN TOAST DISCRETA ESTILO APPLE (Esquina inferior)
+  ===================================================================== -->
+  <div id="apple-toast" role="status" aria-live="polite" class="pointer-events-none fixed bottom-6 right-6 z-50 translate-y-3 opacity-0 transition-all duration-300 ease-apple">
+    <div class="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-[#1D1D1F] text-white text-[13px] font-medium shadow-toast border border-white/[0.1]">
+      <svg class="w-4 h-4 text-white/90" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polyline points="20 6 9 17 4 12" />
+      </svg>
+      <span id="apple-toast-text">Correo copiado al portapapeles</span>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       MODAL CINEMATOGRÁFICO DE SHOWREEL (Fondo negro puro #000000)
+  ===================================================================== -->
+  <div id="showreel-modal" class="hidden fixed inset-0 z-50 bg-[#000000]/95 backdrop-blur-md flex items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true" aria-labelledby="showreel-dialog-title">
+    <div class="w-full max-w-[1040px]">
+
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h3 id="showreel-dialog-title" class="text-[15px] font-medium text-white tracking-[-0.01em]">Showreel 2026 — Jeyko Visuals</h3>
+          <p class="text-[12px] text-white/50">Edición de video · Motion graphics · Diseño gráfico</p>
+        </div>
+        <button type="button" onclick="closeShowreelModal()" aria-label="Cerrar showreel" class="w-9 h-9 rounded-full bg-white/[0.1] hover:bg-white/[0.18] text-white flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3]">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18" />
+            <line x1="18" y1="6" x2="6" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="relative w-full aspect-video rounded-[16px] bg-[#000000] border border-white/[0.12] overflow-hidden flex items-center justify-center">
+        <!--
+          ==================================================================
+          INSTRUCCIÓN PARA INCRUSTAR TU SHOWREEL (YOUTUBE O VIMEO):
+          Reemplaza el bloque <div id="showreel-placeholder"> por tu iframe:
+
+          <iframe
+            class="w-full h-full absolute inset-0"
+            src="https://www.youtube.com/embed/TU_VIDEO_ID?autoplay=1&rel=0"
+            title="Showreel 2026 — Jeyko Visuals"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          ==================================================================
+        -->
+        <div id="showreel-placeholder" class="max-w-md px-6 text-center space-y-4">
+          <div class="w-12 h-12 mx-auto rounded-full border border-white/20 flex items-center justify-center text-white/80">
+            <svg class="w-5 h-5 translate-x-[1px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7.5 5.25a.75.75 0 011.14-.64l11.25 6.75a.75.75 0 010 1.28L8.64 19.39a.75.75 0 01-1.14-.64V5.25z" />
+            </svg>
+          </div>
+          <p class="text-[17px] font-medium text-white tracking-[-0.02em]">
+            Espacio listo para tu Showreel 2026
+          </p>
+          <p class="text-[13px] leading-[1.6] text-white/60">
+            Pega el código <code class="text-white/90">&lt;iframe&gt;</code> de YouTube o Vimeo en la zona comentada dentro de <code class="text-white/90">index.html</code> para reproducirlo aquí en formato cinematográfico.
+          </p>
+          <div class="pt-2 flex flex-wrap items-center justify-center gap-3">
+            <button type="button" onclick="closeShowreelModal(); selectServiceAndScroll('Edición de Video');" class="inline-flex items-center justify-center h-10 px-5 rounded-full bg-white text-[#1D1D1F] text-[13px] font-medium hover:bg-white/90 transition-colors">
+              Iniciar proyecto
+            </button>
+            <a href="https://www.instagram.com/jeykovisuals/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center h-10 px-5 rounded-full bg-white/[0.1] text-white text-[13px] font-normal hover:bg-white/[0.18] transition-colors">
+              Ver trabajos en Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       HOJA MODAL BLANCA DE CASO DE ESTUDIO (Reto, Enfoque, Entregables, Impacto)
+  ===================================================================== -->
+  <div id="case-modal" class="hidden fixed inset-0 z-50 bg-black/45 backdrop-blur-sm overflow-y-auto p-4 sm:p-8 flex items-start sm:items-center justify-center" role="dialog" aria-modal="true" aria-labelledby="case-title">
+    <div class="relative w-full max-w-[780px] my-auto bg-[#FFFFFF] rounded-[24px] shadow-sheet border border-black/[0.08] overflow-hidden">
+
+      <!-- Barra superior -->
+      <div class="flex items-center justify-between px-6 sm:px-9 py-5 border-b border-black/[0.08]">
+        <span id="case-meta-top" class="text-[13px] text-[#6E6E73]"></span>
+        <button type="button" onclick="closeCaseModal()" aria-label="Cerrar caso de estudio" class="w-8 h-8 rounded-full bg-[#F5F5F7] hover:bg-black/[0.08] text-[#1D1D1F] flex items-center justify-center transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3]">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <line x1="6" y1="6" x2="18" y2="18" />
+            <line x1="18" y1="6" x2="6" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Cuerpo del caso -->
+      <div class="p-6 sm:p-9 space-y-8 max-h-[82vh] overflow-y-auto">
+
+        <!-- Vista previa 16:10 -->
+        <div id="case-visual" class="w-full aspect-[16/10] rounded-[16px] overflow-hidden border border-black/[0.08] bg-[#F5F5F7]"></div>
+
+        <!-- Título y contexto -->
+        <div>
+          <h3 id="case-title" class="text-[24px] sm:text-[30px] font-semibold leading-[1.12] tracking-[-0.03em] text-[#1D1D1F]"></h3>
+          <p id="case-client" class="mt-2 text-[15px] text-[#6E6E73]"></p>
+        </div>
+
+        <!-- Reto y Enfoque -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-black/[0.08]">
+          <div>
+            <h4 class="text-[12px] font-medium uppercase tracking-[0.06em] text-[#86868B] mb-2">Reto</h4>
+            <p id="case-challenge" class="text-[15px] leading-[1.6] text-[#1D1D1F]"></p>
+          </div>
+          <div>
+            <h4 class="text-[12px] font-medium uppercase tracking-[0.06em] text-[#86868B] mb-2">Enfoque</h4>
+            <p id="case-approach" class="text-[15px] leading-[1.6] text-[#1D1D1F]"></p>
+          </div>
+        </div>
+
+        <!-- Entregables e Impacto -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-black/[0.08]">
+          <div>
+            <h4 class="text-[12px] font-medium uppercase tracking-[0.06em] text-[#86868B] mb-2.5">Entregables</h4>
+            <ul id="case-deliverables" class="space-y-1.5 text-[14px] text-[#1D1D1F]"></ul>
+          </div>
+          <div>
+            <h4 class="text-[12px] font-medium uppercase tracking-[0.06em] text-[#86868B] mb-2.5">Impacto</h4>
+            <p id="case-impact" class="text-[15px] leading-[1.6] text-[#1D1D1F]"></p>
+            <div id="case-tools" class="mt-4 flex flex-wrap gap-2"></div>
+          </div>
+        </div>
+
+        <!-- Acciones inferiores -->
+        <div class="pt-6 border-t border-black/[0.08] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
+          <button id="case-request-btn" type="button" class="inline-flex items-center justify-center h-[44px] px-6 rounded-full bg-[#1D1D1F] text-white text-[14px] font-medium hover:bg-black transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0071E3]">
+            Solicitar un proyecto similar
+          </button>
+          <button type="button" onclick="closeCaseModal()" class="inline-flex items-center justify-center h-[44px] px-5 rounded-full text-[14px] font-normal text-[#6E6E73] hover:text-[#1D1D1F] transition-colors">
+            Volver al portafolio
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       JAVASCRIPT MODULAR (Sin alertas nativas ni dependencias externas)
+  ===================================================================== -->
+  <script>
+    /**
+     * ---------------------------------------------------------------------
+     * 1. CATÁLOGO DE PROYECTOS (6 Casos curados con estética minimalista)
+     *    Entorno exclusivo: DaVinci Resolve Studio, Fusion, Photoshop,
+     *    Illustrator y Krita.
+     * ---------------------------------------------------------------------
+     */
+    const PROJECTS = [
+      {
+        id: 'video-documental-industrial',
+        title: 'Anatomía del diseño industrial',
+        category: 'video',
+        categoryLabel: 'Edición de Video',
+        clientType: 'Canal editorial de YouTube',
+        year: '2026',
+        serviceKey: 'Edición de Video',
+        clientDetail: 'Canal de diseño y arquitectura · Episodio documental de 18 minutos (4K)',
+        challenge: 'Sostener la atención durante 18 minutos de análisis técnico sin recurrir a cortes agresivos ni recursos visuales que rompieran el tono sereno del canal.',
+        approach: 'Estructuré la narrativa en cuatro actos con pausas respiratorias medidas, planos detalle sincronizados con la voz en off, diseño sonoro contenido y corrección de color cálida.',
+        deliverables: [
+          'Master 4K 16:9 optimizado para YouTube',
+          'Diseño sonoro, música y mezcla balanceada',
+          'Dos cortes verticales de avance para redes'
+        ],
+        impact: 'Incremento sostenido en el tiempo medio de reproducción y adopción del estilo como plantilla narrativa para toda la temporada.',
+        tools: ['DaVinci Resolve Studio', 'Fusion'],
+        artwork: `
+          <svg class="w-full h-full object-cover" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="800" height="500" fill="#161513" />
+            <rect y="0" width="800" height="44" fill="#0A0A0B" />
+            <rect y="456" width="800" height="44" fill="#0A0A0B" />
+            <defs>
+              <linearGradient id="docWall" x1="120" y1="44" x2="720" y2="456" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#2D2A26" />
+                <stop offset="55%" stop-color="#1E1C19" />
+                <stop offset="100%" stop-color="#121110" />
+              </linearGradient>
+              <linearGradient id="docSun" x1="180" y1="44" x2="540" y2="410" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#EAE2D6" stop-opacity="0.22" />
+                <stop offset="100%" stop-color="#EAE2D6" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient id="docPedestal" x1="340" y1="210" x2="540" y2="456" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#D8D2C8" />
+                <stop offset="100%" stop-color="#7B756C" />
+              </linearGradient>
+            </defs>
+            <rect y="44" width="800" height="412" fill="url(#docWall)" />
+            <polygon points="110,44 410,44 590,456 210,456" fill="url(#docSun)" />
+            <rect x="0" y="348" width="800" height="108" fill="#171614" />
+            <line x1="0" y1="348" x2="800" y2="348" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+            <rect x="368" y="256" width="152" height="128" rx="2" fill="url(#docPedestal)" />
+            <rect x="368" y="256" width="54" height="128" fill="#E6E0D6" fill-opacity="0.35" />
+            <circle cx="444" cy="204" r="52" fill="#2A2825" />
+            <path d="M444 152 A52 52 0 0 0 398 228 A48 48 0 0 1 444 152Z" fill="#DFD7CB" fill-opacity="0.45" />
+            <polygon points="368,384 520,384 610,418 424,418" fill="#090908" fill-opacity="0.65" />
+          </svg>
+        `
+      },
+      {
+        id: 'motion-tipografia-lanzamiento',
+        title: 'Sistema de tipografía cinética',
+        category: 'motion',
+        categoryLabel: 'Motion Graphics',
+        clientType: 'Lanzamiento de producto tecnológico',
+        year: '2026',
+        serviceKey: 'Motion Graphics',
+        clientDetail: 'Marca tecnológica · Película principal de lanzamiento (60 s)',
+        challenge: 'Comunicar seis nuevas prestaciones en menos de un minuto con lectura inmediata tanto con sonido como en reproducción silenciada.',
+        approach: 'Diseñé los sistemas vectoriales en Illustrator y animé cada transición en Fusion con curvas de velocidad suaves, retícula estricta y jerarquía tipográfica monocromática.',
+        deliverables: [
+          'Película principal 4K a 60 fps',
+          'Paquete de títulos reutilizables en Fusion',
+          'Versiones adaptadas 1:1 y 9:16 para pauta'
+        ],
+        impact: 'Pieza central del lanzamiento digital, manteniendo coherencia visual entre la web, la presentación oficial y los anuncios.',
+        tools: ['Fusion', 'DaVinci Resolve Studio', 'Illustrator'],
+        artwork: `
+          <svg class="w-full h-full object-cover" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="800" height="500" fill="#F5F5F7" />
+            <line x1="80" y1="0" x2="80" y2="500" stroke="rgba(0,0,0,0.05)" stroke-width="1" />
+            <line x1="400" y1="0" x2="400" y2="500" stroke="rgba(0,0,0,0.05)" stroke-width="1" />
+            <line x1="720" y1="0" x2="720" y2="500" stroke="rgba(0,0,0,0.05)" stroke-width="1" />
+            <line x1="0" y1="250" x2="800" y2="250" stroke="rgba(0,0,0,0.05)" stroke-width="1" />
+            <text x="80" y="218" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, Inter, sans-serif" font-size="92" font-weight="600" letter-spacing="-4.5">Claridad.</text>
+            <text x="80" y="314" fill="#B8B8BD" font-family="-apple-system, BlinkMacSystemFont, Inter, sans-serif" font-size="92" font-weight="600" letter-spacing="-4.5">En cuadro.</text>
+            <line x1="82" y1="364" x2="310" y2="364" stroke="#1D1D1F" stroke-width="1.5" />
+            <circle cx="310" cy="364" r="4" fill="#1D1D1F" />
+            <rect x="614" y="346" width="106" height="36" rx="18" fill="#1D1D1F" />
+            <circle cx="634" cy="364" r="4" fill="#FFFFFF" />
+            <line x1="648" y1="364" x2="700" y2="364" stroke="rgba(255,255,255,0.55)" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        `
+      },
+      {
+        id: 'video-serie-entrevistas',
+        title: 'Serie editorial de entrevistas',
+        category: 'video',
+        categoryLabel: 'Edición de Video',
+        clientType: 'Podcast audiovisual y marca personal',
+        year: '2026',
+        serviceKey: 'Edición de Video',
+        clientDetail: 'Podcast de negocios y producto · Temporada de 12 episodios multicámara',
+        challenge: 'Convertir conversaciones grabadas a tres cámaras en episodios ágiles con igualación de color precisa y estética constante en cada estreno.',
+        approach: 'Establecí un flujo multicámara en DaVinci Resolve Studio con igualación de piel y exposición, edición limpia de diálogos y gráficos sobrios para citas clave.',
+        deliverables: [
+          'Edición completa multicámara en 4K',
+          'Gancho inicial narrativo por episodio',
+          'Títulos inferiores y créditos modulares'
+        ],
+        impact: 'Redujo los tiempos de entrega semanales y elevó la percepción de marca frente a invitados y patrocinadores.',
+        tools: ['DaVinci Resolve Studio', 'Photoshop'],
+        artwork: `
+          <svg class="w-full h-full object-cover" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="800" height="500" fill="#18191C" />
+            <g fill="#212328">
+              <rect x="64" y="48" width="18" height="404" rx="2" />
+              <rect x="96" y="48" width="18" height="404" rx="2" />
+              <rect x="128" y="48" width="18" height="404" rx="2" />
+              <rect x="160" y="48" width="18" height="404" rx="2" />
+              <rect x="192" y="48" width="18" height="404" rx="2" />
+              <rect x="590" y="48" width="18" height="404" rx="2" />
+              <rect x="622" y="48" width="18" height="404" rx="2" />
+              <rect x="654" y="48" width="18" height="404" rx="2" />
+              <rect x="686" y="48" width="18" height="404" rx="2" />
+              <rect x="718" y="48" width="18" height="404" rx="2" />
+            </g>
+            <rect x="242" y="88" width="316" height="214" rx="10" fill="#101114" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+            <circle cx="400" cy="172" r="36" fill="#2A2C32" />
+            <path d="M332 276 C332 238 362 216 400 216 C438 216 468 238 468 276" fill="#25272C" />
+            <g stroke="#FFFFFF" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round">
+              <line x1="252" y1="364" x2="252" y2="378" />
+              <line x1="266" y1="354" x2="266" y2="388" />
+              <line x1="280" y1="346" x2="280" y2="396" />
+              <line x1="294" y1="360" x2="294" y2="382" />
+              <line x1="308" y1="340" x2="308" y2="402" />
+              <line x1="322" y1="352" x2="322" y2="390" />
+              <line x1="336" y1="362" x2="336" y2="380" />
+              <line x1="350" y1="344" x2="350" y2="398" />
+              <line x1="364" y1="358" x2="364" y2="384" />
+              <line x1="378" y1="336" x2="378" y2="406" stroke-opacity="0.85" />
+              <line x1="392" y1="348" x2="392" y2="394" stroke-opacity="0.85" />
+              <line x1="406" y1="356" x2="406" y2="386" stroke-opacity="0.85" />
+              <line x1="420" y1="342" x2="420" y2="400" />
+              <line x1="434" y1="360" x2="434" y2="382" />
+              <line x1="448" y1="350" x2="448" y2="392" />
+              <line x1="462" y1="364" x2="462" y2="378" />
+              <line x1="476" y1="348" x2="476" y2="394" />
+              <line x1="490" y1="358" x2="490" y2="384" />
+              <line x1="504" y1="344" x2="504" y2="398" />
+              <line x1="518" y1="362" x2="518" y2="380" />
+              <line x1="532" y1="354" x2="532" y2="388" />
+              <line x1="546" y1="366" x2="546" y2="376" />
+            </g>
+          </svg>
+        `
+      },
+      {
+        id: 'motion-explicativo-producto',
+        title: 'Película explicativa de producto',
+        category: 'motion',
+        categoryLabel: 'Motion Graphics',
+        clientType: 'Startup de software B2B',
+        year: '2026',
+        serviceKey: 'Motion Graphics',
+        clientDetail: 'Plataforma de gestión financiera · Video demo comercial (75 s)',
+        challenge: 'Explicar un flujo operativo con múltiples pantallas y datos sin abrumar al espectador con capturas reales sobrecargadas.',
+        approach: 'Redibujé los módulos clave en vectores limpios con Illustrator y los animé en Fusion con cámara virtual sutil, profundidad y foco guiado por el guion.',
+        deliverables: [
+          'Video explicativo principal de 75 segundos',
+          'Tres piezas cortas en bucle para página web',
+          'Activos vectoriales organizados por escena'
+        ],
+        impact: 'Aceleró la comprensión del producto en reuniones comerciales y en la página principal de la empresa.',
+        tools: ['Fusion', 'Illustrator', 'DaVinci Resolve Studio'],
+        artwork: `
+          <svg class="w-full h-full object-cover" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="stageBg" x1="0" y1="0" x2="800" y2="500" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#EFEFF2" />
+                <stop offset="100%" stop-color="#E2E2E7" />
+              </linearGradient>
+              <filter id="softElev" x="90" y="70" width="620" height="390" filterUnits="userSpaceOnUse">
+                <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#000000" flood-opacity="0.09" />
+              </filter>
+            </defs>
+            <rect width="800" height="500" fill="url(#stageBg)" />
+            <g filter="url(#softElev)">
+              <rect x="148" y="96" width="504" height="308" rx="22" fill="#FFFFFF" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+            </g>
+            <circle cx="182" cy="126" r="5" fill="#D2D2D7" />
+            <circle cx="200" cy="126" r="5" fill="#D2D2D7" />
+            <circle cx="218" cy="126" r="5" fill="#D2D2D7" />
+            <line x1="148" y1="152" x2="652" y2="152" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+            <rect x="180" y="180" width="112" height="14" rx="7" fill="#1D1D1F" />
+            <rect x="180" y="210" width="84" height="10" rx="5" fill="#D2D2D7" />
+            <rect x="180" y="232" width="96" height="10" rx="5" fill="#E5E5EA" />
+            <rect x="180" y="254" width="72" height="10" rx="5" fill="#E5E5EA" />
+            <rect x="332" y="180" width="286" height="186" rx="14" fill="#F5F5F7" />
+            <path d="M362 324 C408 318, 434 278, 474 270 C514 262, 540 226, 588 214" stroke="#1D1D1F" stroke-width="2.5" stroke-linecap="round" />
+            <circle cx="588" cy="214" r="5.5" fill="#0071E3" />
+          </svg>
+        `
+      },
+      {
+        id: 'shorts-editorial-vertical',
+        title: 'Formato vertical editorial 9:16',
+        category: 'shorts',
+        categoryLabel: 'Shorts & Reels',
+        clientType: 'Marca digital y creador',
+        year: '2026',
+        serviceKey: 'Edición de Video',
+        clientDetail: 'Sistema mensual de contenido corto · 16 piezas verticales al mes',
+        challenge: 'Diferenciar los Reels y Shorts de la saturación habitual de subtítulos llamativos manteniendo retención sólida desde el primer segundo.',
+        approach: 'Creé un lenguaje vertical limpio con encuadre equilibrado, tipografía legible, cortes rítmicos y apoyos visuales puntuales integrados con Photoshop e Illustrator.',
+        deliverables: [
+          '16 piezas verticales 9:16 en 4K',
+          'Sistema tipográfico de subtítulos a medida',
+          'Portadas coordinadas para la cuadrícula del feed'
+        ],
+        impact: 'Mayor consistencia estética en el perfil y crecimiento orgánico constante en alcance y guardados.',
+        tools: ['DaVinci Resolve Studio', 'Fusion', 'Illustrator'],
+        artwork: `
+          <svg class="w-full h-full object-cover" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <filter id="phoneShadow" x="260" y="30" width="280" height="460" filterUnits="userSpaceOnUse">
+                <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#000000" flood-opacity="0.16" />
+              </filter>
+            </defs>
+            <rect width="800" height="500" fill="#ECECEF" />
+            <rect x="112" y="94" width="164" height="312" rx="22" fill="#E1E1E6" />
+            <rect x="524" y="94" width="164" height="312" rx="22" fill="#E1E1E6" />
+            <g filter="url(#phoneShadow)">
+              <rect x="304" y="48" width="192" height="404" rx="28" fill="#121215" />
+            </g>
+            <rect x="316" y="60" width="168" height="380" rx="20" fill="#1C1C20" />
+            <circle cx="400" cy="186" r="46" fill="#29292E" />
+            <rect x="352" y="256" width="96" height="8" rx="4" fill="#FFFFFF" fill-opacity="0.88" />
+            <rect x="366" y="274" width="68" height="7" rx="3.5" fill="#FFFFFF" fill-opacity="0.4" />
+            <rect x="336" y="416" width="128" height="2.5" rx="1.25" fill="#FFFFFF" fill-opacity="0.2" />
+            <rect x="336" y="416" width="58" height="2.5" rx="1.25" fill="#FFFFFF" fill-opacity="0.85" />
+          </svg>
+        `
+      },
+      {
+        id: 'design-identidad-miniaturas',
+        title: 'Identidad visual y sistema de miniaturas',
+        category: 'design',
+        categoryLabel: 'Diseño Gráfico',
+        clientType: 'Canal de YouTube y marca editorial',
+        year: '2026',
+        serviceKey: 'Diseño Gráfico',
+        clientDetail: 'Rediseño integral de canal · Branding vectorial y sistema de miniaturas',
+        challenge: 'Unificar la identidad gráfica de un canal cuyas portadas perdían claridad en dispositivos móviles y no tenían una retícula reconocible.',
+        approach: 'Desarrollé la arquitectura vectorial y tipográfica en Illustrator, el retoque fotográfico en Photoshop e ilustraciones de apoyo en Krita bajo una retícula replicable.',
+        deliverables: [
+          'Guía visual y retícula de miniaturas 16:9',
+          'Identidad vectorial, banner y piezas para redes',
+          'Plantillas editables listas para nuevos lanzamientos'
+        ],
+        impact: 'Aumento claro en la tasa de clics (CTR) y reconocimiento inmediato del canal dentro del feed de YouTube.',
+        tools: ['Illustrator', 'Photoshop', 'Krita'],
+        artwork: `
+          <svg class="w-full h-full object-cover" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <rect width="800" height="500" fill="#F2F2F0" />
+            <rect x="72" y="88" width="416" height="248" rx="14" fill="#1D1D1F" />
+            <rect x="98" y="114" width="144" height="196" rx="8" fill="#2C2C30" />
+            <text x="270" y="196" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, Inter, sans-serif" font-size="40" font-weight="600" letter-spacing="-1.6">Criterio</text>
+            <text x="270" y="240" fill="#A1A1A6" font-family="-apple-system, BlinkMacSystemFont, Inter, sans-serif" font-size="40" font-weight="600" letter-spacing="-1.6">Visual.</text>
+            <line x1="270" y1="272" x2="366" y2="272" stroke="rgba(255,255,255,0.28)" stroke-width="1.5" />
+            <rect x="512" y="88" width="216" height="148" rx="14" fill="#FFFFFF" stroke="rgba(0,0,0,0.06)" />
+            <text x="542" y="182" fill="#1D1D1F" font-family="-apple-system, BlinkMacSystemFont, Inter, sans-serif" font-size="64" font-weight="600" letter-spacing="-3">Aa</text>
+            <rect x="512" y="256" width="216" height="80" rx="14" fill="#FFFFFF" stroke="rgba(0,0,0,0.06)" />
+            <circle cx="556" cy="296" r="16" fill="#1D1D1F" />
+            <circle cx="600" cy="296" r="16" fill="#6E6E73" />
+            <circle cx="644" cy="296" r="16" fill="#D2D2D7" />
+            <circle cx="688" cy="296" r="16" fill="#F5F5F7" stroke="rgba(0,0,0,0.12)" />
+            <rect x="72" y="360" width="656" height="52" rx="12" fill="#FFFFFF" stroke="rgba(0,0,0,0.06)" />
+            <line x1="104" y1="386" x2="290" y2="386" stroke="#1D1D1F" stroke-width="2" stroke-linecap="round" />
+            <line x1="316" y1="386" x2="460" y2="386" stroke="#D2D2D7" stroke-width="2" stroke-linecap="round" />
+            <text x="696" y="391" text-anchor="end" fill="#6E6E73" font-family="-apple-system, BlinkMacSystemFont, Inter, sans-serif" font-size="13" font-weight="500">16:9 · GRID 08</text>
+          </svg>
+        `
+      }
+    ];
+
+    /**
+     * ---------------------------------------------------------------------
+     * 2. RENDERIZADO Y FILTRADO DEL PORTAFOLIO (Control Segmentado)
+     * ---------------------------------------------------------------------
+     */
+    const portfolioGrid = document.getElementById('portfolio-grid');
+    const segmentButtons = document.querySelectorAll('.segment-btn');
+
+    function renderPortfolio(filter = 'all') {
+      try {
+        const list = filter === 'all'
+          ? PROJECTS
+          : PROJECTS.filter((item) => item.category === filter);
+
+        portfolioGrid.innerHTML = list.map((project) => `
+          <article
+            onclick="openCaseModal('${project.id}')"
+            role="button"
+            tabindex="0"
+            onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openCaseModal('${project.id}');}"
+            class="group cursor-pointer focus:outline-none"
+          >
+            <!-- Miniatura limpia 16:10 sin etiquetas superpuestas -->
+            <div class="w-full aspect-[16/10] rounded-[18px] overflow-hidden bg-[#F5F5F7] border border-black/[0.08]">
+              <div class="w-full h-full transition-transform duration-700 ease-apple group-hover:scale-[1.02]">
+                ${project.artwork}
+              </div>
+            </div>
+
+            <!-- Información editorial debajo del marco -->
+            <div class="mt-4 flex items-baseline justify-between gap-4 px-0.5">
+              <div>
+                <h3 class="text-[18px] font-semibold tracking-[-0.02em] text-[#1D1D1F] group-hover:text-[#0071E3] transition-colors duration-200">
+                  ${project.title}
+                </h3>
+                <p class="mt-1 text-[14px] text-[#6E6E73]">
+                  ${project.categoryLabel} · ${project.clientType}
+                </p>
+              </div>
+              <span class="text-[14px] text-[#86868B] tabular-nums flex-shrink-0">
+                ${project.year}
+              </span>
+            </div>
+          </article>
+        `).join('');
+      } catch (error) {
+        console.error('Error al renderizar portafolio:', error);
+      }
+    }
+
+    segmentButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        segmentButtons.forEach((item) => {
+          item.setAttribute('aria-selected', 'false');
+          item.className = 'segment-btn px-4 py-1.5 rounded-full text-[13px] font-normal transition-all duration-200 ease-apple text-[#6E6E73] hover:text-[#1D1D1F]';
+        });
+
+        btn.setAttribute('aria-selected', 'true');
+        btn.className = 'segment-btn px-4 py-1.5 rounded-full text-[13px] font-medium transition-all duration-200 ease-apple bg-[#FFFFFF] text-[#1D1D1F] shadow-segment';
+
+        renderPortfolio(filter);
+      });
+    });
+
+    /**
+     * ---------------------------------------------------------------------
+     * 3. MODALES (Showreel cinematográfico y Hoja de Caso de Estudio)
+     * ---------------------------------------------------------------------
+     */
+    const showreelModal = document.getElementById('showreel-modal');
+    const caseModal = document.getElementById('case-modal');
+
+    function openShowreelModal() {
+      showreelModal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeShowreelModal() {
+      showreelModal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function openCaseModal(projectId) {
+      const project = PROJECTS.find((p) => p.id === projectId);
+      if (!project) return;
+
+      document.getElementById('case-meta-top').textContent = `${project.categoryLabel} · ${project.year}`;
+      document.getElementById('case-visual').innerHTML = project.artwork;
+      document.getElementById('case-title').textContent = project.title;
+      document.getElementById('case-client').textContent = project.clientDetail;
+      document.getElementById('case-challenge').textContent = project.challenge;
+      document.getElementById('case-approach').textContent = project.approach;
+      document.getElementById('case-impact').textContent = project.impact;
+
+      const deliverablesEl = document.getElementById('case-deliverables');
+      deliverablesEl.innerHTML = project.deliverables
+        .map((item) => `<li class="flex items-start gap-2"><span class="text-[#86868B]">—</span><span>${item}</span></li>`)
+        .join('');
+
+      const toolsEl = document.getElementById('case-tools');
+      toolsEl.innerHTML = project.tools
+        .map((tool) => `<span class="px-3 py-1 rounded-full bg-[#F5F5F7] border border-black/[0.06] text-[12px] text-[#1D1D1F]">${tool}</span>`)
+        .join('');
+
+      const requestBtn = document.getElementById('case-request-btn');
+      requestBtn.onclick = () => {
+        closeCaseModal();
+        selectServiceAndScroll(
+          project.serviceKey,
+          `Me interesa un proyecto similar a "${project.title}". `
+        );
+      };
+
+      caseModal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeCaseModal() {
+      caseModal.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    showreelModal.addEventListener('click', (e) => {
+      if (e.target === showreelModal) closeShowreelModal();
+    });
+
+    caseModal.addEventListener('click', (e) => {
+      if (e.target === caseModal) closeCaseModal();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (!showreelModal.classList.contains('hidden')) closeShowreelModal();
+        if (!caseModal.classList.contains('hidden')) closeCaseModal();
+      }
+    });
+
+    /**
+     * ---------------------------------------------------------------------
+     * 4. CHIPS DE SERVICIO Y SINCRONIZACIÓN CON PORTAFOLIO / SERVICIOS
+     * ---------------------------------------------------------------------
+     */
+    const serviceChips = document.querySelectorAll('.service-chip');
+    const hiddenServiceInput = document.getElementById('field-service');
+
+    function setActiveServiceChip(serviceName) {
+      hiddenServiceInput.value = serviceName;
+
+      serviceChips.forEach((chip) => {
+        const isMatch = chip.getAttribute('data-service') === serviceName;
+        chip.setAttribute('aria-pressed', String(isMatch));
+        chip.className = isMatch
+          ? 'service-chip px-4 py-2 rounded-full text-[13px] font-medium transition-all duration-200 ease-apple bg-[#1D1D1F] text-white border border-[#1D1D1F]'
+          : 'service-chip px-4 py-2 rounded-full text-[13px] font-normal transition-all duration-200 ease-apple bg-[#FFFFFF] text-[#1D1D1F] border border-black/[0.1] hover:border-black/[0.25]';
+      });
+    }
+
+    serviceChips.forEach((chip) => {
+      chip.addEventListener('click', () => {
+        setActiveServiceChip(chip.getAttribute('data-service'));
+      });
+    });
+
+    function selectServiceAndScroll(serviceName, detailsPrefix = '') {
+      setActiveServiceChip(serviceName);
+
+      const detailsField = document.getElementById('field-details');
+      if (detailsPrefix && detailsField && !detailsField.value.trim()) {
+        detailsField.value = detailsPrefix;
+      }
+
+      const contactSection = document.getElementById('contacto');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    /**
+     * ---------------------------------------------------------------------
+     * 5. ACORDEÓN DE PREGUNTAS FRECUENTES
+     * ---------------------------------------------------------------------
+     */
+    document.querySelectorAll('.faq-trigger').forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        const item = trigger.closest('.faq-item');
+        const panel = item.querySelector('.faq-panel');
+        const plusIcon = trigger.querySelector('.faq-plus');
+        const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+
+        document.querySelectorAll('.faq-item').forEach((other) => {
+          other.querySelector('.faq-trigger').setAttribute('aria-expanded', 'false');
+          other.querySelector('.faq-panel').classList.add('hidden');
+          other.querySelector('.faq-plus').classList.remove('rotate-45');
+        });
+
+        if (!isOpen) {
+          trigger.setAttribute('aria-expanded', 'true');
+          panel.classList.remove('hidden');
+          plusIcon.classList.add('rotate-45');
+        }
+      });
+    });
+
+    /**
+     * ---------------------------------------------------------------------
+     * 6. MENÚ MÓVIL
+     * ---------------------------------------------------------------------
+     */
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconHamburger = document.getElementById('icon-hamburger');
+    const iconCloseMenu = document.getElementById('icon-close-menu');
+
+    function setMobileMenuState(open) {
+      mobileMenu.classList.toggle('hidden', !open);
+      iconHamburger.classList.toggle('hidden', open);
+      iconCloseMenu.classList.toggle('hidden', !open);
+      mobileMenuToggle.setAttribute('aria-expanded', String(open));
+      document.body.classList.toggle('overflow-hidden', open);
+    }
+
+    mobileMenuToggle.addEventListener('click', () => {
+      const isClosed = mobileMenu.classList.contains('hidden');
+      setMobileMenuState(isClosed);
+    });
+
+    document.querySelectorAll('.mobile-link').forEach((link) => {
+      link.addEventListener('click', () => setMobileMenuState(false));
+    });
+
+    /**
+     * ---------------------------------------------------------------------
+     * 7. COPIADO AL PORTAPAPELES Y TOAST DISCRETO ESTILO APPLE
+     * ---------------------------------------------------------------------
+     */
+    let toastTimer = null;
+
+    function showAppleToast(message) {
+      const toast = document.getElementById('apple-toast');
+      const toastText = document.getElementById('apple-toast-text');
+      if (!toast || !toastText) return;
+
+      toastText.textContent = message;
+      toast.classList.remove('opacity-0', 'translate-y-3');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-3');
+      }, 2600);
+    }
+
+    function copyToClipboardSafe(text) {
+      try {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.setAttribute('readonly', '');
+        textarea.style.position = 'fixed';
+        textarea.style.left = '-9999px';
+        document.body.appendChild(textarea);
+        textarea.select();
+        const copied = document.execCommand('copy');
+        document.body.removeChild(textarea);
+        return copied;
+      } catch (err) {
+        console.error('Error al copiar al portapapeles:', err);
+        return false;
+      }
+    }
+
+    function copyEmailAddress() {
+      const btn = document.getElementById('copy-email-btn');
+      if (copyToClipboardSafe('jeykovisuals@gmail.com')) {
+        btn.textContent = 'Copiado';
+        showAppleToast('jeykovisuals@gmail.com copiado');
+        setTimeout(() => {
+          btn.textContent = 'Copiar correo';
+        }, 2200);
+      }
+    }
+
+    /**
+     * ---------------------------------------------------------------------
+     * 8. FORMULARIO DE BRIEF -> WHATSAPP (+593 93 966 5581) Y CORREO
+     * ---------------------------------------------------------------------
+     */
+    const briefForm = document.getElementById('brief-form');
+    const formError = document.getElementById('form-error');
+    const WHATSAPP_NUMBER = '593939665581';
+    const CONTACT_EMAIL = 'jeykovisuals@gmail.com';
+
+    function collectAndValidateBrief() {
+      formError.classList.add('hidden');
+
+      const service = document.getElementById('field-service').value;
+      const name = document.getElementById('field-name').value.trim();
+      const contact = document.getElementById('field-contact').value.trim();
+      const timeline = document.getElementById('field-timeline').value;
+      const details = document.getElementById('field-details').value.trim();
+
+      if (!name || !contact || !details) {
+        formError.textContent = 'Por favor completa tu nombre, tu correo o canal/marca y los detalles del proyecto.';
+        formError.classList.remove('hidden');
+        return null;
+      }
+
+      const structuredMessage = [
+        'Hola Jeyko, te comparto el brief de mi proyecto:',
+        '',
+        `Servicio: ${service}`,
+        `Nombre: ${name}`,
+        `Correo o canal/marca: ${contact}`,
+        `Plazo estimado: ${timeline}`,
+        '',
+        'Detalles del proyecto:',
+        details
+      ].join('\n');
+
+      return {
+        service,
+        name,
+        contact,
+        timeline,
+        details,
+        structuredMessage
+      };
+    }
+
+    // Envío principal por WhatsApp
+    briefForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = collectAndValidateBrief();
+      if (!data) return;
+
+      const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(data.structuredMessage)}`;
+      try {
+        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        showAppleToast('Brief preparado en WhatsApp');
+      } catch (err) {
+        console.error('No se pudo abrir WhatsApp:', err);
+        window.location.href = whatsappUrl;
+      }
+    });
+
+    // Envío secundario por correo electrónico
+    function sendBriefByEmail() {
+      const data = collectAndValidateBrief();
+      if (!data) return;
+
+      const subject = `Brief de proyecto — ${data.service} (${data.name})`;
+      const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(data.structuredMessage)}`;
+
+      try {
+        window.location.href = mailtoUrl;
+        showAppleToast('Abriendo cliente de correo');
+      } catch (err) {
+        console.error('No se pudo abrir el cliente de correo:', err);
+      }
+    }
+
+    /**
+     * ---------------------------------------------------------------------
+     * 9. ANIMACIONES DE ENTRADA SUTILES CON INTERSECTION OBSERVER
+     * ---------------------------------------------------------------------
+     */
+    document.addEventListener('DOMContentLoaded', () => {
+      renderPortfolio('all');
+
+      const revealElements = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove('opacity-0', 'translate-y-4');
+              entry.target.classList.add('opacity-100', 'translate-y-0');
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+
+        revealElements.forEach((el) => observer.observe(el));
+      } else {
+        revealElements.forEach((el) => {
+          el.classList.remove('opacity-0', 'translate-y-4');
+          el.classList.add('opacity-100', 'translate-y-0');
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
